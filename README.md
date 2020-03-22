@@ -15,8 +15,10 @@ In this example read the `db.properties` file and created JNDI DataSource using 
     }
 ```
 # Code for reading the from JNDI Context
+```java
  JndiObjectFactoryBean bean = new JndiObjectFactoryBean(); 
  bean.setJndiName("java:/comp/env/jndiDataSource");
  bean.setProxyInterface(DataSource.class);
  bean.setLookupOnStartup(true);
  bean.afterPropertiesSet(); 
+```
