@@ -1,6 +1,6 @@
 # Spring Boot JNDI Example
 In this example, read the `db.properties` file and created JNDI DataSource using Tomcat JNDI Context
-## Code for setting
+## Setting for JNDI Context
 ```java
  protected void postProcessContext(Context context) {
 	 	log.info("in side post process");
@@ -14,7 +14,7 @@ In this example, read the `db.properties` file and created JNDI DataSource using
         context.getNamingResources().addResource(resource);
     }
 ```
-## Code for reading the from JNDI Context
+## Getting from JNDI Context
 ```java
  JndiObjectFactoryBean bean = new JndiObjectFactoryBean(); 
  bean.setJndiName("java:/comp/env/jndiDataSource");
